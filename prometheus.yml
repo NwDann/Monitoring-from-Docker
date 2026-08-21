@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 15s # Frecuencia de recolección de métricas
+
+scrape_configs:
+  - job_name: "ubuntu-metrics"
+    static_configs:
+      - targets: [":9100"]
+
+  - job_name: "windows-metrics"
+    static_configs:
+      - targets: [":9182"]
